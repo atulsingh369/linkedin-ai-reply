@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn AI Reply",
+  "version": "1.0.0",
+  "description": "AI-powered reply suggestions for LinkedIn messages",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content.tsx-loader-c6ac785f.js"
+      ],
+      "matches": [
+        "https://www.linkedin.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://www.linkedin.com/*"
+      ],
+      "resources": [
+        "assets/client-2e1558b1.js",
+        "assets/content.tsx-944f0c92.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}
